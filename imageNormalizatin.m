@@ -7,7 +7,7 @@ function [ outputFrame ] = imageNormalizatin( inputFrame )
     medianFrame = medfilt2(grayFrame);
     
     % sharpen image
-    sharpenedImage = imsharpen(medianFrame);
+%     sharpenedImage = imsharpen(medianFrame);
     
     % removing pixels in the low end
     correctedImage = imadjust(sharpenedImage);
