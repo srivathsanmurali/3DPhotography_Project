@@ -4,8 +4,8 @@ clear;
 clc;
 
 %% constanst
-file = 'videos\sapphire_corridor.mp4';
-numberFramesUsed = 300;
+file = 'videos\cnb_landscape.mp4';
+numberFramesUsed = 100;
 
 %% initalization
 % reading video data
