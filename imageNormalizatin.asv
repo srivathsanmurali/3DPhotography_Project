@@ -4,10 +4,10 @@ function [ outputFrame ] = imageNormalizatin( inputFrame )
     grayFrame = rgb2gray(inputFrame);
     
     %median filter
-    medianFrame = medfilt2(grayFrame);
+    
     
     % sharpen image
-    sharpenedImage = imsharpen(medianFrame);
+    sharpenedImage = imsharpen(grayFrame);
     
     % removing pixels in the low end
     correctedImage = imadjust(sharpenedImage);
