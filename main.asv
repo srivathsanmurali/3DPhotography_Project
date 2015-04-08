@@ -44,12 +44,19 @@ I = read(obj,1);
 %% test with one frame
 pi = imageNormalizatin(I);
 gray = rgb2gray(I);
-gray = medfilt2(gray);
+gray = 
+edge1 = edge(gray,'canny');
+edge2 = edge(gray);
+edge3 = edge(gray,'prewitt');
 
-subplot(1,2,1);
-imshow(gray);
-subplot(1,2,2);
-imshow(pi);
+subplot(2,2,1);
+imshow(gray);title('Origingal hsv');
+subplot(2,2,2);
+imshow(edge1); title('h');
+subplot(2,2,3);
+imshow(edge2); title('h');
+subplot(2,2,4);
+imshow(edge3); title('h');
 
 % imshow(oi);
 set(gcf, 'Position', get(0,'Screensize'));

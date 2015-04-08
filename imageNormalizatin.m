@@ -5,13 +5,12 @@ function [ outputFrame ] = imageNormalizatin( inputFrame )
     
     %median filter
     medianFrame = medfilt2(grayFrame);
-    
+
     % sharpen image
     sharpenedImage = imsharpen(medianFrame);
+
+    % edge detection
+    outputFrame = edge(sharpenedImage,'Prewitt');
     
-    % removing pixels in the low end
-    correctedImage = imadjust(sharpenedImage);
-    
-    outputFrame = correctedImage;
 end
 
